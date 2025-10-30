@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <!-- <script>
+        let text = "";
+        for (let i = 0; i < 10; i++) {
+            // text += "hiii" + "<br>";
+            // window.alert("hii");
+        }
+        document.getElementById("demo").innerHTML = text
+    </script> -->
+
+    <script>
+        let details = {
+            name: "arunsai",
+            age: "24",
+            role: "react"
+        };
+
+        for (key in details) {
+            console.log("key: " + key + ", value:  " + details[key]);
+        }
+
+        // for (let values of details) {
+        //     console.log(values);
+        // }
+
+
+        for (let i = 0; i < 5; i++) {
+            let row = "";
+            for (let j = i; j < 5; j++) {
+                row += "* ";
+            }
+            console.log(row);
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

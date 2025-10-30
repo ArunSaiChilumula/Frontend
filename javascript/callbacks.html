@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // A callback is a function that you pass as an argument to another function so that it can be called later, after a task is completed.
+
+
+        //         Sometimes tasks take time – like fetching data from the internet or reading a file. We don’t want JavaScript to wait and stop everything else. So, we use callbacks to let it know:
+        // “Start this task, and when you finish, call this other function to handle the result.”
+
+        //ex=>1
+        function firstTask() {
+            console.log("Starting first task");
+        }
+
+        function secondTask() {
+            console.log("Starting second task after first one finishes");
+        }
+
+        firstTask();
+        secondTask();
+
+
+        // -------------------------------
+        // 1. Basic Callback (Synchronous)
+        // -------------------------------
+        function greet(name, callback) {
+            console.log("Hello,", name);
+            callback(); // calling the function passed as an argument
+        }
+
+        function sayGoodbye() {
+            console.log("Goodbye!");
+        }
+
+        greet("Team", sayGoodbye);
+        // Output:
+        // Hello, Team
+        // Goodbye!
+
+
+        // -------------------------------
+        // 2. Asynchronous Callback
+        // -------------------------------
+        function fetchData(callback) {
+            console.log("Fetching data...");
+
+            setTimeout(() => {
+                console.log("Data fetched from server ✅");
+                callback("Sample Data");
+            }, 2000); // simulates delay
+        }
+
+        fetchData((data) => {
+            console.log("Processing data:", data);
+        });
+
+        console.log("remaining code");
+        // Output:
+        // Fetching data...
+        // remaining code
+        // (after 2s) Data fetched from server ✅
+        // Processing data: Sample Data
+
+
+        // -------------------------------
+        // 3. Dependent Tasks (Chaining Callbacks)
+        // -------------------------------
+        function step1(callback) {
+            setTimeout(() => {
+                console.log("Step 1 done");
+                callback();
+            }, 1000);
+        }
+
+        function step2(callback) {
+            setTimeout(() => {
+                console.log("Step 2 done");
+                callback();
+            }, 1000);
+        }
+
+        function step3(callback) {
+            setTimeout(() => {
+                console.log("Step 3 done");
+                callback();
+            }, 1000);
+        }
+
+        // Chaining them
+        step1(() => {
+            step2(() => {
+                step3(() => {
+                    console.log("All steps finished 🎉");
+                });
+            });
+        });
+
+
+        // -------------------------------
+        // 4. Callback Hell (Problem)
+        // -------------------------------
+        function orderFood(callback) {
+            setTimeout(() => {
+                console.log("Food ordered");
+                callback();
+            }, 1000);
+        }
+
+        function cookFood(callback) {
+            setTimeout(() => {
+                console.log("Food cooked");
+                callback();
+            }, 1000);
+        }
+
+        function serveFood(callback) {
+            setTimeout(() => {
+                console.log("Food served");
+                callback();
+            }, 1000);
+        }
+
+        orderFood(() => {
+            cookFood(() => {
+                serveFood(() => {
+                    console.log("Dinner complete 🍽️");
+                });
+            });
+        });
+        // Notice the "pyramid" shape → hard to read/maintain
+
+
+        // -------------------------------
+        // 5. Solution Preview (Promises/Async)
+        // -------------------------------
+        // Callbacks → messy (callback hell)
+        // Promises or async/await make code clean
+        // Example with Promises (just to show your team):
+        function orderFoodPromise() {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    console.log("Food ordered");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        function cookFoodPromise() {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    console.log("Food cooked");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        function serveFoodPromise() {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    console.log("Food served");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        // Cleaner with .then()
+        orderFoodPromise()
+            .then(cookFoodPromise)
+            .then(serveFoodPromise)
+            .then(() => console.log("Dinner complete 🍽️ (with Promises)"));
+
+
+
+    </script>
+</body>
+
+</html>

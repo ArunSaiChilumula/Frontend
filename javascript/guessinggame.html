@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+
+        function guessinggame() {
+
+            console.log("welcome to guessing the secret number!!!");
+            const computerchoice = Math.floor(Math.random() * 10) + 1;
+            let count = 0;
+            let userchoice;
+
+
+            while (true) {
+
+                userchoice = prompt("guess the number!");
+
+                count++;
+
+                if (userchoice > computerchoice) {
+                    console.log("too high!!")
+                    console.log("try again");
+
+
+                }
+                else if (userchoice < computerchoice) {
+                    console.log("too low!!");
+                    console.log("try again");
+
+                }
+                else {
+                    console.log("hey hey! You guessed it right!! in " + count + " attempts");
+                    break;
+                }
+            }
+
+        }
+
+        guessinggame();
+    </script>
+</body>
+
+</html>

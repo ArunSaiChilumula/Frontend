@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // creation
+        // let fruits = ["apple", "banana", "mango"];
+
+        // let cars = new Array("bmw", "audi", "porshe");
+
+
+        // console.log(fruits);
+        // console.log(cars);
+
+
+        // //we can define any array length by new array check down example
+        // let bikes = new Array(10);
+        // console.log(bikes.length, bikes);
+        // console.log(`-----------------------------------`);
+
+
+        // //accessing
+
+        // console.log(`${fruits[0]} are red`);
+        // console.log(`${cars[0]} is a german brand`);
+        // console.log(`-----------------------------------`);
+
+        // //modifying
+
+        // //mod (adding) 
+
+        // console.log(fruits);
+        // fruits.push("gauva"); // push adds new element at last
+        // console.log(fruits);
+
+        // fruits.unshift("avacado"); // unshift adds new element at first
+        // console.log(fruits);
+        // console.log(`-----------------------------------`);
+
+        // //mod (removing)
+
+        // fruits.pop("gauva"); // pop removes  element at last
+        // console.log(fruits);
+
+        // fruits.shift("avacado"); // shift removes  element at first
+        // console.log(fruits);
+        // console.log(`-----------------------------------`);
+
+        // //mod (changing)
+
+        // fruits[0] = "pineapple"; //changing from apple to pineapple
+        // console.log(fruits);
+
+        // console.log(`-----------------------------------`);
+
+        // //array properties
+        // // console.log(fruits.length, fruits.constructor);
+        // //constructor shows which function is responsible for creation of an array
+
+
+        // //---------------------------------------------------------------------------------------
+
+        // //looping
+
+        // //"for loop"
+
+        // //By using "for loop" we can control starting iteration,condition,increments on our own
+
+        // for (let i = 0; i < 10; i++) {
+        //     console.log("java script arrays" + i);
+        // };
+        // console.log(`-----------------------------------`);
+
+        // //"for of"
+
+        // //new of iteration clean and more readable
+
+        // for (let fruit of fruits) {
+        //     console.log(fruit);
+        // }
+        // console.log(`-----------------------------------`);
+
+        // //forEach
+
+        // cars.forEach(function (element, index) {
+        //     console.log(element, index);
+        // });
+        // console.log(`-----------------------------------`);
+
+        // //for each with arrow function
+
+        // cars.forEach((element, index) => {
+        //     console.log(element, index);
+        // });
+        // console.log(`-----------------------------------`);
+
+
+
+        // // Searching & Checking
+
+
+        // let numbers = [1, 3, 1, 58, 7, 9, 2, 8, 2, 10, 15, 20];
+
+        // //indexof 
+        // //Finds the first occurrence of an item.
+
+        // console.log(numbers.indexOf(1));
+        // console.log(numbers.indexOf(89));  // returns -1 if not present
+
+        // //lastindexof
+        // //Finds the last occurrence of an item.
+
+        // console.log(numbers.lastIndexOf(1));
+
+        // //includes
+        // //check if this item exits if yes return true or false
+
+        // console.log(numbers.includes(58));
+
+        // // find()
+        // //Finds the first item that meets a condition.
+
+        // console.log(numbers.find(n => n > 10 && n < 50));
+
+        // // findIndex()
+        // // Finds the index of the first item that meets a condition.
+
+        // console.log(numbers.findIndex(n => n > 15));
+
+
+        // //findLast && findLastIndex same like find and findindex but backwards
+
+        // console.log(`-----------------------------------`);
+
+
+
+        // Transformation = taking an array and changing it into a new form.
+        // 1. map() :- Transform each element
+        // Creates a new array by applying a function to every element.
+        // Original array does not change.
+
+        // console.log(numbers);
+        // let double = numbers.map(n => n * 2);
+        // console.log(double);
+
+
+        // 2. filter() :- Pick specific elements
+        // Creates a new array with only elements that pass a condition.
+        // Original array remains same.
+
+        // console.log(numbers);
+        // let even = numbers.filter(n => n % 2 === 0);
+        // console.log(even);
+        // let odd = numbers.filter(n => n % 2 === 1);
+        // console.log(odd);
+
+        // // 3.reduce():-It’s used to “reduce” an array into a single value by repeatedly combining elements.
+        // let rnumber = [1, 2, 3]
+        // console.log(rnumber);
+        // let sum = rnumber.reduce((a, b) => a + b, 0);  //last 0 is a=0 to count from 0 we keep it 0
+        // console.log(sum);
+
+
+        // //4. reduceRight() → Accumulate from right
+        // // Same as reduce(), but works from right → left.
+        // console.log(rnumber);
+        // let sum1 = rnumber.reduceRight((a, b) => a + b, 0);  //last 0 is a=0 to count from 0 we keep it 0
+        // console.log(sum1);
+
+        // console.log(`-----------------------------------`);
+
+
+        // //sorting
+        // //arraning according to alphabetical order for strings and accending for numbers
+
+        // let names = ["rakesh", "vivek", "naveen", "arun"];
+        // console.log(names);
+        // console.log(names.sort());
+
+        // console.log(numbers);
+
+        // let newarr = [1, 3, 200];
+        // console.log(newarr.sort());
+
+        // let sortednums = numbers.sort((a, b) => a - b);
+        // console.log(sortednums);
+        // console.log(`-----------------------------------`);
+
+        // //reverse
+        // //it reverse an array
+
+        // console.log(names);
+        // console.log(names.reverse());
+        // console.log(`-----------------------------------`);
+
+
+
+        // //Joining & Splitting
+        // // ✅ join()
+        // // Combines array elements into a string.
+
+        // let j1 = [1, 2, 3];
+        // console.log(typeof j1.join(" + "), j1.join(" + "));
+
+        // //  toString()
+        // // Converts array into a string(elements separated by commas).
+
+        // let str = j1.toString();
+        // console.log(typeof j1.toString(), j1.toString());
+
+
+        // //split string into array
+        // let spl = str.split(",");
+        // console.log(spl);
+
+        // console.log(`-----------------------------------`);
+
+        // // Extracting & Combining Arrays
+        // // ✅ slice()
+        // // Extracts part of the array without changing the original.
+
+        // console.log(fruits);
+        // let slicedarr = fruits.slice(1, 3);
+        // console.log(slicedarr);
+
+
+        // // splice()
+        // // Adds or removes items from the array (destructive).
+        // console.log(fruits);
+        // // fruits.splice(1, 1);  removes second element
+        // fruits.splice(1, 1, "avacado"); //replaces second element with avacado new element
+        // console.log(fruits);
+
+
+
+        // //concat
+        // //Combines two or more arrays.
+
+        // let firstArray = [1, 2, 3];
+        // let secondArray = [4, 5, 6];
+
+        // console.log(firstArray.concat(secondArray));
+
+        // // By using spread operator
+
+        // let thirdArray = [...firstArray, ...secondArray]
+        // console.log(thirdArray);
+
+
+
+        // //Advanced
+
+        // let new1 = [1, 2, 3, 4];
+
+        // // ➤ every()
+
+        // // Checks if all elements satisfy a condition.
+        // // Returns true only if every item passes the test.
+        // console.log(new1.every(n => n % 2 === 0)); //every() checks for all elements to pass the condition
+
+        // //   ➤ some()
+
+        // // Checks if at least one element satisfies the condition.
+        // // Returns true if one or more items pass the test.
+        // console.log(new1.some(n => n % 2 == 0)); //some() checks for atleast one element to pass the condition
+
+
+
+        // //flat and flat map
+        // // ✅ Flat & FlatMap
+        // // These methods handle nested arrays (arrays within arrays).
+
+        // // ➤ flat()
+        // // Flattens a nested array into a single-level array.
+        // // It only flattens one level by default.
+        // // If you want to flatten deeper levels:
+
+        // let f1 = [1, 2, 3, [2, 2, [3]]];
+        // console.log(f1.flat(2));
+
+        // // ➤ flatmap()
+        // // Maps each element and flattens the result in one step.
+        // // First splits each string → then flattens into one array.
+        // let words = ["hii good morning"];
+        // let f2 = words.flatMap(n => n.split(" "));
+        // console.log(f2);
+
+        // //Array.from() & Array.of()
+        // // These methods help create arrays in different ways.
+        // // ➤ Array.from()
+        // // Converts array-like or iterable objects into real arrays.
+
+        // let wish = "hello";
+
+        // //1
+        // let result = Array.from(wish);
+        // console.log(result);
+
+        //2
+        // function example() {
+        //     console.log(arguments); // Array-like object
+        //     let args = Array.from(arguments); // Convert to array
+        //     console.log(args.map(x => x * 2)); // Use array methods
+        // }
+        // example(1, 2, 3); // [2, 4, 6]
+
+        //3
+        // let items = document.querySelectorAll('div'); // NodeList
+        // let arr = Array.from(items); // Convert to real array
+
+
+        // //Array.of
+        // //its one type of array creation
+        // //we can create an array with values directly
+        // let nums = Array.of(3, 2, 3);
+        // console.log(nums);
+
+        // ✅ fill() & copyWithin()
+        // These are methods that manipulate arrays in-place.
+        // ➤ fill()
+        // Fills elements with a specific value.
+
+        // let val = ["add", "sub", "mult", "div"];
+
+        // val.fill("go");
+        // console.log(val);
+
+        // val.fill(0, 1, 3);
+        // console.log(val);
+
+
+
+        //✅ Destructuring with Arrays
+        //Destructuring is a way to extract values from arrays.
+
+        let ops = ["add", "sub", "mult", "div"];
+
+        let [a, d] = ops
+        console.log(a, d);
+
+        let [, , m] = ops
+        console.log(m);
+
+        let [, , ...rest] = ops
+        console.log(rest);
+
+        console.log("----------------------------------------------------------------");
+        //✅ Rest & Spread Operators
+        // These operators are used to handle arrays flexibly.
+        // ➤ Rest (...)
+        // Used to collect multiple elements into one array.
+
+        function sumation(...rest) {
+            return rest.reduce((a, b) => a + b, 0);
+        }
+        console.log(sumation(1, 2, 3, 4, 5));
+
+        console.log("----------------------------------------------------------------");
+        // ➤ Spread(...)
+        // Used to expand elements from an array.
+
+        let ar = [1, 2, 3];
+        let ar1 = [...ar, 4, 5, 6]; //[1,2,3,4,5,6]
+        console.log(ar1);
+        console.log("----------------------------------------------------------------");
+        // ✅ Multidimensional Arrays
+
+        // Arrays can contain other arrays, creating a matrix-like structure.
+
+        let multi = [1, 2, 3, [4, 5, [6], 7], 8];
+
+        console.log(multi[3][2][0]);
+
+        console.log("----------------------------------------------------------------");
+        //by using with method when we replace the element at a particular index it will store in the new array without changing the original array
+
+        let ramayan = ["ram", "sita", "lakshman"];
+        let newramayan = ramayan.with(2, "hanuman");
+        console.log(" new => " + newramayan + "  old => " + ramayan);
+
+        console.log("----------------------------------------------------------------");
+
+        // ✅ Sorting Advanced
+
+        // You can sort arrays by more complex rules, like strings or objects.
+
+        let emp = [
+            { name: "naveen", age: 25 },
+            { name: "rakesh", age: 28 },
+            { name: "arun", age: 24 }
+        ]
+
+        let newemp = emp.sort((a, b) => b.age - a.age);
+        console.log(newemp);
+        console.log("----------------------------------------------------------------");
+        // Array Iterators
+
+        // These methods let you access keys, values, or both.
+
+        let alpha = ["a", "b", "c"];
+
+        let keys = alpha.keys();
+        let values = alpha.values();
+        let entries = alpha.entries();
+
+        console.log(...keys);
+        console.log(...values);
+        console.log(...entries);
+
+        console.log("----------------------------------------------------------------");
+        // High-Order Array Operations
+        // ➤ Combining map(), filter(), reduce() pipelines
+
+        // You can chain multiple methods together.
+
+        // Example – Find the total of even squares:
+
+        // let numbers1 = [1, 2, 3, 4, 5, 6];
+
+        // let total = numbers1
+        //     .filter(n => n % 2 === 0)  // Keep even numbers
+        //     .map(n => n * n)           // Square each one
+        //     .reduce((sum, n) => sum + n, 0); // Add them up
+
+        // console.log(total); // 56 → (2² + 4² + 6² = 4 + 16 + 36)
+
+
+        //✅ Performance Considerations
+        // ➤ Differences between for, forEach, map
+
+        // for loops are generally faster because they have less overhead.
+
+        // forEach and map are easier to read but slightly slower because of extra function calls.
+
+        // ➤ Large data handling with reduce
+
+        // When dealing with big datasets, reduce() is efficient because it avoids creating intermediate arrays like map() or filter() might.
+
+
+        //         ➤ at() method
+
+        // It allows you to access elements easily from the end using negative indices.
+
+        // let arrk = [10, 20, 30, 40];
+        // console.log(arrk.at(-1)); // 40
+        // console.log(arrk.at(-2)); // 30
+
+
+        // This is much clearer than arr[arr.length - 1].
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

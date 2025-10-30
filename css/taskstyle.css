@@ -1,0 +1,516 @@
+body {
+    box-sizing: border-box;
+}
+
+.main {
+
+    width: 100%;
+    overflow: visible;
+
+}
+
+.navselect:hover {
+    color: #80B82D;
+
+}
+
+.top {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head input::placeholder {
+    color: white;
+    font-size: 15px;
+}
+
+.navanchor {
+    text-decoration: none;
+    color: black;
+}
+
+.navanchor:hover {
+    color: #80B82D;
+}
+
+.search {
+    background-color: #80B82D;
+    color: white;
+    text-decoration: underline;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.head {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #80B82D;
+    height: 100px;
+    width: 100%;
+    color: white;
+}
+
+nav {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    position: sticky;
+    top: 0;
+
+
+}
+
+.banner {
+    background-image: url("../images/slider4.jpg");
+    display: flex;
+    justify-content: flex-start;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 480px;
+    width: 100%;
+
+}
+
+.banner-content {
+    margin: 70px 0px 0px 160px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner-button {
+    margin-top: 25px;
+    padding: 10px 28px;
+    border-radius: 10px;
+    background-color: #80B82D;
+    color: white;
+    font-size: 15px;
+    font-weight: lighter;
+    border: none;
+}
+
+.banner2 {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    width: 100%;
+}
+
+.banner2>div {
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.bimg1 {
+    background-image: url("../images/banner5.jpg");
+    background-repeat: no-repeat;
+    width: 330px;
+    height: auto;
+}
+
+.bimg2 {
+    background-image: url("../images/banner6.jpg");
+    background-repeat: no-repeat;
+    width: 425px;
+    height: auto;
+}
+
+.bimg3 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    height: auto;
+}
+
+.bimg31 {
+    background-image: url("../images/banner7.jpg");
+    background-repeat: no-repeat;
+    width: 500px;
+    height: auto;
+}
+
+.bimg32 {
+    background-image: url("../images/banner8.jpg");
+    background-repeat: no-repeat;
+    width: 500px;
+    height: auto;
+}
+
+.banner3 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.banner3>div {
+    margin: 5px;
+    /* border: 2px solid black; */
+}
+
+.banner3button1 {
+    border-radius: 15px;
+    padding: 6px 20px;
+    margin: 0px 5px;
+    color: #80B82D;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: lighter;
+    border: 1px solid #80B82D;
+
+}
+
+.banner3button2 {
+    border-radius: 15px;
+    padding: 6px 20px;
+    margin: 0px 5px;
+    color: #80B82D;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: lighter;
+    border: 1px solid #80B82D;
+
+}
+
+.banner3button3 {
+    border-radius: 15px;
+    padding: 6px 20px;
+    margin: 0px 5px;
+    color: #80B82D;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: lighter;
+    border: 1px solid #80B82D;
+
+}
+
+.curossel {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+
+}
+
+.curossel h4 {
+    color: greenyellow;
+}
+
+.curossel del {
+    color: black;
+}
+
+.curossel>div {
+    margin: 10px;
+}
+
+.banner4 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.banner4>div {
+    margin: 5px;
+    /* border: 2px solid black; */
+}
+
+.curossel2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 50px;
+
+}
+
+.curossel2 h4 {
+    color: greenyellow;
+}
+
+.curossel2 del {
+    color: black;
+}
+
+.curossel2>div {
+    cursor: pointer;
+    margin: 10px;
+}
+
+.banner5 {
+    background-image: url("../images/banner3.jpg");
+    width: 100%;
+    background-size: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.banner5Content {
+    padding: 50px 200px;
+}
+
+.banner5button {
+    margin-top: 25px;
+    padding: 13px 30px;
+    border-radius: 10px;
+    background-color: #80B82D;
+    color: white;
+    font-size: 14px;
+    font-weight: lighter;
+    border: none;
+}
+
+.banner6 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.banner6>div {
+    margin: 5px;
+    /* border: 2px solid black; */
+}
+
+.sellercontainer {
+
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.sellercard1 {
+    flex: 30%;
+
+}
+
+.sellercard1 img {
+    padding-left: 200px;
+}
+
+.sellercard2 {
+    flex: 70%;
+    padding-right: 200px;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0%;
+
+}
+
+.sellercard2>div {
+    margin-bottom: 12px;
+    padding: 2px 80px 0px 25px;
+
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+
+.info>div {
+    margin: 5px;
+}
+
+.description {
+    color: rgb(53, 49, 49);
+}
+
+.description h4 {
+    color: greenyellow;
+}
+
+.description del {
+    color: rgb(109, 103, 103);
+}
+
+.banner7 {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.banner7>div {
+    margin: 5px;
+    /* border: 2px solid black; */
+}
+
+.banner7content {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.banner7content>div {
+    margin: 18px;
+}
+
+.banner9 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.banner10 {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.banner10>div {
+    margin: 3px;
+    /* border: 2px solid black; */
+}
+
+.productscardcontainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 50px;
+    width: 90%;
+}
+
+.productscardcontainer>div {
+    margin: 0px 20px 50px 20px;
+    padding: 8px 40px;
+}
+
+.productscard {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.productscard>div {
+
+    margin: 0px 5px;
+}
+
+.prodescription h4 {
+    color: #80B82D;
+}
+
+.prodescription del {
+    color: rgb(109, 103, 103);
+}
+
+.brands {
+    transition: 1s;
+    margin-top: 500px;
+    border: 2px solid rgb(238, 229, 229);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 70%;
+}
+
+.brands>div {
+    padding: 10px 0px;
+    opacity: 0.3;
+}
+
+.brands>div:hover {
+    opacity: 0.8;
+}
+
+.footer1 {
+    display: flex;
+    justify-content: center;
+}
+
+.footer1>div {
+    padding: 25px;
+    margin: 8px;
+}
+
+.anc {
+    text-decoration: none;
+    line-height: 28px;
+    color: black;
+}
+
+.anc:hover {
+    color: #80B82D;
+}
+
+.email {
+
+    border: 0;
+    padding: 20px;
+    margin: 0%;
+    border-radius: 50px 0 0 50px;
+}
+
+.submit {
+    transition: 0.5s;
+    border: 0;
+    padding: 20px;
+    margin: 0%;
+    color: white;
+    border-radius: 0 50px 50px 0;
+    background-color: #80B82D;
+}
+
+.submit:hover {
+
+
+    background-color: rgb(22, 22, 22);
+    color: white;
+}
+
+.subscribebutton {
+
+    border-radius: 50px;
+    border: 1px solid rgb(212, 208, 208);
+
+}
+
+.footer2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #80B82D;
+    max-width: 100%;
+    color: white;
+    width: 100%;
+    height: 100px;
+}
+
+.footer2>div {
+    margin: 50px;
+}

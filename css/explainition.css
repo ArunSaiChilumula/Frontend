@@ -1,0 +1,17 @@
+.main {
+    background-color: aqua;
+    margin: 20px;
+    padding: 20px;
+}
+
+#identify {
+    background-color: rgb(149, 206, 42);
+    margin: 20px;
+    padding: 20px;
+}
+
+.button1 {
+    padding: 20px;
+    border-radius: 50px;
+    background-color: cadetblue;
+}

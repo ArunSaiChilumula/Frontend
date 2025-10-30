@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //array creation 
+        let arr = [1, 2, 3, 4, 5]
+
+        let arr1 = new Array();
+        arr1 = [1, 2, 3, 4, 5];
+
+        console.log(arr);
+        console.log(arr1);
+
+        //adding
+
+        arr.push(0);
+        console.log(arr);
+        arr.unshift(0);
+        console.log(arr);
+
+        //deleting
+
+        arr.pop();
+        console.log(arr);
+
+        arr.shift();
+        console.log(arr);
+
+        //duplicating a array
+
+        let duplicatedArray = arr.slice();
+        console.log("duplicated array :" + duplicatedArray);
+
+        //is array method
+
+        console.log(Array.isArray(arr)); //true
+        console.log(Array.isArray("Eligible"));  //false
+        console.log(Array.isArray({ name: "arun" }));  //false
+        console.log(Array.isArray([])); //true
+
+        //printing elements in array using for loop
+
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+
+        //array with different datatypes
+
+        let mixedArray = ["arun", 25, true, { role: "javafullstack", address: "kphb" }]
+
+        for (let i = 0; i < mixedArray.length; i++) {
+            console.log(mixedArray[i]);
+        }
+
+        //array destructuring  and default value and skipping elements
+
+        const [name, age, isemp, , id = 183] = mixedArray;
+        console.log(name, age, isemp, id);
+
+        //nested array
+
+        let nest = [1, 2, 3, ["one", "two", "three"]];
+
+        console.log(nest[3][0]);
+
+
+        //nested destucturing 
+
+        const [, , , [, num]] = nest;
+        console.log(num);
+
+        //rest operator
+
+        const [num1, num2, ...remaining] = arr1;
+
+        console.log(num1, num2, remaining);
+
+        //spread operator
+        // means copying the array object
+
+        let dummy = [...arr1]
+        console.log(dummy);
+        console.log(arr1);
+
+        //
+        let nums = [1, 2, 3];
+        let words = ["one", "two", "three"];
+
+        console.log("before");
+        console.log(nums);
+        console.log(words);
+
+        [nums, words] = [words, nums];
+
+
+        console.log("After");
+        console.log(nums);
+        console.log(words);
+
+
+        //merging two arrays
+        const numsWords = [...nums, ...words]
+        console.log(numsWords);
+
+        //length
+
+        console.log(arr1.length);
+
+        //we can increase and decrease array length manually
+
+
+        arr1.length = 8;
+        console.log(arr1.length, arr1);
+
+        console.log("decrease");
+        //here when we decrease the array length the elements out of that array willbe gone
+
+        arr1.length = 4;
+        console.log(arr1.length, arr1);
+
+
+        // Array methods 
+
+        //concat merging the arrays
+        let first = [1, 2, 3];
+        let second = [4, 5, 6];
+        let third = [7, 8, 9];
+
+        let merged = first.concat(second, third);
+        console.log(merged);
+
+
+
+        //join method
+
+        let a1 = [1, 2, 3];
+        let a2 = [4, 5, 6];
+
+        let joy = a1.join("=");
+        console.log(joy);
+        console.log(Array.isArray(joy));
+        console.log(typeof (joy));
+
+        //fill
+
+        let colors = ["white", "blue", "skyblue", "black"];
+        colors.fill("pink", 2, 3);
+        console.log(colors);
+
+        //  includes
+
+        console.log(colors.includes("black"));
+        console.log(colors.includes("purple"));
+
+
+        //index of and last index of
+
+        let fruits = ["apple", "banana", "pineApple", "banana", "mango"];
+
+        console.log(fruits.indexOf("banana")); //1
+        console.log(fruits.lastIndexOf("banana")); //3
+
+        //reverse an array
+        console.log("before :", fruits);
+        console.log("after :", fruits.reverse());
+
+
+        //sorting
+
+        let numbers = [1, 2, 5, 9, 4];
+        let strs = ["arun", "rakesh", "naveen"];
+
+        console.log(numbers.sort());//ascending
+        console.log(numbers.reverse());//descending
+        console.log(strs.sort());//ascending
+        console.log(strs.reverse());//descending
+
+        //numbers like this sort will sort after converting them to strings 
+
+        // check this example for clarity
+
+        let numbers1 = [1, 2, 50, 9, 4];
+        console.log(numbers1.sort());
+
+        //to make it work do this( pass argument function) to sort like this
+
+        console.log(numbers1.sort(function (a, b) {
+            return a === b ? 0 : a > b ? 1 : -1
+        }));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

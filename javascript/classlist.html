@@ -1,0 +1,34 @@
+<p id="para">Hello</p>
+<button onclick="makeRed()">Make Red</button>
+<button onclick="makeBig()">Make Big</button>
+<button onclick="toggleHidden()">Show/Hide</button>
+
+<style>
+    .red {
+        color: red;
+    }
+
+    .big {
+        font-size: 30px;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+
+<script>
+    let para = document.getElementById("para");
+
+    function makeRed() {
+        para.classList.add("red");
+    }
+
+    function makeBig() {
+        para.classList.add("big");
+    }
+
+    function toggleHidden() {
+        para.classList.toggle("hidden");
+    }
+</script>

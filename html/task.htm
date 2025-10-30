@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" href="../css/taskstyle.css">
+</head>
+<body>
+    <div class="main">
+ <div class="top">
+    <div style="margin-left: 150px;">
+    <select name="language" id="language" style="position: relative; left: 20px;border:none;" >
+        <option value="language" selected>Language</option>
+        <option value="French">French</option>
+        <option value="Spanish">Spanish</option>
+        <option value="Russian">Russian</option>
+    </select>   
+    <select name="Currency" id="Currency" style="position: relative; left: 20px;border:none;">
+        <option value="Currency" selected>Currency</option>
+        <option value="Euro">Euro</option>
+        <option value="Doller">Doller</option>
+        <option value="Rupee">Rupee</option>
+    </select>
+    </div>
+
+    <div style="margin-right: 150px;">
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter-icon lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook-icon lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+    </div>
+
+    </div>
+
+    <div class="head">
+        <div class="heading"><input type="text" placeholder="Search here...                  " class="search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></div>
+        <div class="logo"><img src="../images/logo2.webp"></div>
+        <div><a href="" style="color: white;text-decoration: none;font-family: Arial, Helvetica, sans-serif;font-size: 14px;padding-right: 10px;"> REGISTER / LOGIN </a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+        </div>
+    </div>
+    <nav>
+        <div>
+            <select name="Home" class="navselect"  style="border:none;padding: 15px;">
+        <option value="Home" selected>Home</option>
+        <option value="Catagories">Catagories</option>
+         </select>
+        </div>
+
+        <div>
+            <select name="Shop" class="navselect" style="border:none;padding: 15px;">
+        <option value="Shop" selected>Shop</option>
+        <option value="Fruits">Fruits</option>
+         </select>
+        </div>
+
+        <div>
+            <select name="Blog" class="navselect"  style="border:none;padding: 15px;">
+        <option value="Blog" selected>Blog</option>
+        <option value="Aboutus">About us</option>
+         </select>
+        </div>
+
+        <div>
+        <select name="Pages" class="navselect"  style="border:none;padding: 15px;">
+        <option value="Pages" selected>Pages</option>
+        <option value="Contact us">Contact us</option>
+         </select>
+        </div>
+        
+        <div style="padding: 15px;"><a href="" class="navanchor">Contact Us</a></div>
+        <div style="padding: 15px;"><a href="" class="navanchor">Vegetables</a></div>
+        <div style="padding: 15px;"><a href="" class="navanchor">Fruits</a></div>
+        <div style="padding: 15px;"><a href="" class="navanchor">Salads</a></div>
+    </nav>
+    <div class="banner">
+       <div class="banner-content">
+        <p><span style="font-family:work sans,sans-serif;font-size:45px;font-weight:400;"><b>Fresh Organic Food</b></span>
+            <br>
+        <span style="font-family:'Courier New', Courier, monospace;font-size:30px;font-weight:lighter;">Tomatoes,Onions & Garlic</span><br>
+    </p>
+    <p><span style="font-family:work sans,sans-serif;;font-size:17px;font-weight:lighter;color:rgb(74, 71, 71);">10% certifled-organic mix of fruit and veggies. Perfect <br>for weekly cooking and snacking!</span></p>
+    <button class="banner-button"> Read More </button>
+       </div> 
+    </div>
+
+
+    <div class="banner2">
+        <div class="bimg1"></div>
+        <div class="bimg2"></div>
+        <div class="bimg3">
+            <div class="bimg31"></div>
+            <div class="bimg32"></div>
+        </div>
+    </div>
+        
+    <div class="banner3">
+       <div><i>Recently added our store</i></div> 
+        <div><span style=" font-family:work sans,sans-serif;font-size:30px;font-weight:400;">Trending Products</span></div>
+        <div><button class="banner3button1">VEGETABLES</button> <button class="banner3button2">FRUITS</button> <button class="banner3button3">SALADS</button></div>
+    </div>
+
+    <div class="curossel">
+        <div >
+            <img src="../images/product1.jpg" alt="veggies"> 
+            <p>Aliquam Consequat</p>
+            <small>Fruits</small>
+            <h4>$26.00 <del class=""> $362.00</del></h4> 
+        </div>
+        <div >
+            <img src="../images/product3.jpg" alt="veggies">
+            <p>Donec Non Est</p>
+            <small>Fruits</small>
+            <h4>$26.00 <del> $362.00</del></h4>
+        </div>
+        <div >
+            <img src="../images/product5.jpg" alt="veggies">
+            <p>Etiam Gravida</p>
+            <small>Fruits</small>
+            <h4>$26.00 <del> $362.00</del></h4>
+        </div>
+        <div >
+            <img src="../images/product7.jpg" alt="veggies">
+            <p>Fusce Aliquam</p>
+            <small>Fruits</small>
+            <h4>$26.00 <del> $362.00</del></h4>
+        </div>
+        <div >
+            <img src="../images/product9.jpg" alt="veggies">
+            <p>Letraset Sheets</p>
+            <small>Fruits</small>
+            <h4>$26.00 <del> $362.00</del></h4>
+        </div>
+    </div>
+
+    <div class="banner4">
+        <div><i>Recently added our store</i></div> 
+        <div><span style=" font-family:work sans,sans-serif;font-size:30px;font-weight:400;">Mostview Products</span></div>
+    </div>
+
+
+    <div class="curossel2">
+        <div >
+            <img src="../images/product11.jpg" alt="veggies"> 
+            <p>Aliquam Consequat</p>
+            <small>Fruits</small>
+            <h4>$26.00 <del> $362.00</del></h4> 
+        </div>
+        <div >
+            <img src="../images/product2(1).jpg" alt="veggies">
+            <p>Donec Non Est</p>
+            <small>Fruits</small>
+            <h4>$26.00 <del> $362.00</del></h4>
+        </div>
+        <div >
+            <img src="../images/product7.jpg" alt="veggies">
+            <p>Etiam Gravida</p>
+            <small>Fruits</small>
+            <h4>$26.00 <del> $362.00</del></h4>
+        </div>
+        <div >
+            <img src="../images/product6.jpg" alt="veggies">
+            <p>Fusce Aliquam</p>
+            <small>Fruits</small>
+            <h4>$26.00 <del> $362.00</del></h4>
+        </div>
+        <div >
+            <img src="../images/product1.jpg" alt="veggies">
+            <p>Letraset Sheets</p>
+            <small>Fruits</small>
+            <h4>$26.00 <del> $362.00</del></h4>
+        </div>
+    </div>
+
+    <div class="banner5">
+        
+        <div class="banner5Content">
+            <p>
+                <span style=" font-family:work sans,sans-serif;font-size:20px;font-weight:lighter;color:#80B82D;">BLACK FRIDAYS !</span><br><br>
+                <span style="font-family:work sans,sans-serif;font-size:45px;font-weight:400;">SALE 50% OFF</span>
+                <br>
+                <span style=" font-family:work sans,sans-serif;font-size:25px;font-weight:lighter;color: rgb(50, 47, 47);">ALL VEGETABLE PRODUCTS</span>
+            </p>
+            <button class="banner5button"> DISCOVER NOW </button>
+        </div>
+
+    </div>
+    <div class="banner6">
+        <div><i>Recently added our store</i></div> 
+        <div><span style=" font-family:work sans,sans-serif;font-size:35px;font-weight:400;">Best Sellers</span></div>
+    </div>
+
+    <div class="sellercontainer">
+        <div class="sellercard1">
+            <img src="../images/banner4.jpg" alt="veggies">
+        </div>
+        <div class="sellercard2">
+            <div class="info">
+                <div> <img src="../images/product1.jpg" alt="" height="110px" width="110px"></div>
+               <div class="description">
+                    <p>Fusce Aliquam</p>
+                    <small>Fruits</small>
+                    <h4>$26.00 <del> $362.00</del></h4>
+               </div>
+            </div>
+            <div  class="info">
+                 <div> <img src="../images/product9.jpg" alt="" height="110px" width="110px"></div>
+               <div class="description">
+                    <p>Fusce Aliquam</p>
+                    <small>Fruits</small>
+                    <h4>$26.00 <del> $362.00</del></h4>
+               </div>
+            </div>
+            <div class="info">
+                 <div> <img src="../images/product7.jpg" alt="" height="110px" width="110px"></div>
+               <div class="description">
+                    <p>Fusce Aliquam</p>
+                    <small>Fruits</small>
+                    <h4>$26.00 <del> $362.00</del></h4>
+               </div>
+            </div>
+            <div class="info">
+                 <div> <img src="../images/product6.jpg" alt="" height="110px" width="110px"></div>
+               <div class="description">
+                    <p>Fusce Aliquam</p>
+                    <small>Fruits</small>
+                    <h4>$26.00 <del> $362.00</del></h4>
+               </div>
+            </div>
+            <div class="info">
+                 <div> <img src="../images/product5.jpg" alt="" height="110px" width="110px"></div>
+               <div class="description">
+                    <p>Fusce Aliquam</p>
+                    <small>Fruits</small>
+                    <h4>$26.00 <del> $362.00</del></h4>
+               </div>
+            </div>
+            <div class="info">
+                 <div> <img src="../images/product3.jpg" alt="" height="110px" width="110px"></div>
+               <div class="description">
+                    <p>Fusce Aliquam</p>
+                    <small>Fruits</small>
+                    <h4>$26.00 <del> $362.00</del></h4>
+               </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner7">
+        <div><i>Our recent article about organic</i></div> 
+        <div><span style=" font-family:work sans,sans-serif;font-size:35px;font-weight:400;">Our Blog Posts</span></div>
+    </div>
+
+    <div class="banner7content">
+        <div>
+            <img src="../images/blog1.jpg" alt="veggies">
+            <p style="color: rgb(85, 78, 78);">23/06/2021 | eCommerce</p>
+            <p style="font-family: Arial, Helvetica, sans-serif;font-weight:bold;">Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Incidunt, ullam?</p>
+            <a href="#" style="text-decoration: none;color: black;">SHOW MORE </a>    
+        </div>
+        <div>
+            <img src="../images/blog2.jpg" alt="veggies">
+             <p style="color: rgb(85, 78, 78);">23/06/2021 | eCommerce</p>
+            <p style="font-family: Arial, Helvetica, sans-serif;font-weight:bold;">Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Incidunt, ullam?</p>
+            <a href="#" style="text-decoration: none;color: black;">SHOW MORE </a> 
+        </div>
+        <div>
+            <img src="../images/blog3.jpg" alt="veggies">
+             <p style="color: rgb(85, 78, 78);">23/06/2021 | eCommerce</p>
+            <p style="font-family: Arial, Helvetica, sans-serif;font-weight:bold;">Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Incidunt, ullam?</p>
+            <a href="#" style="text-decoration: none;color: black;">SHOW MORE </a> 
+        </div>
+    </div>
+
+        <div class="banner9">
+            <img src="../images/banner9.jpg" alt="banner">
+        </div>
+
+    </div>
+
+     <div class="banner10">
+        <div><i>Recently added our store</i></div> 
+        <div><span style=" font-family:work sans,sans-serif;font-size:35px;font-weight:400;">Featured Products</span></div>
+    </div>
+
+    <div class="productscardcontainer">
+        <div class="productscard">
+            <div>
+                <img src="../images/product3.jpg" alt="veggies"  height="110px" width="110px">
+            </div>
+            <div class="prodescription">
+                    <p>Fusce Aliquam</p>
+                    <small>Fruits</small>
+                    <h4>$26.00 <del> $362.00</del></h4>
+               </div>
+        </div>
+        <div class="productscard">
+            <div>
+                <img src="../images/product5.jpg" alt="veggies"  height="110px" width="110px">
+            </div>
+            <div class="prodescription">
+                    <p>Fusce Aliquam</p>
+                    <small>Fruits</small>
+                    <h4>$26.00 <del> $362.00</del></h4>
+               </div>
+        </div>
+        <div class="productscard">
+            <div>
+                <img src="../images/product6.jpg" alt="veggies"  height="110px" width="110px">
+            </div>
+            <div class="prodescription">
+                    <p>Fusce Aliquam</p>
+                    <small>Fruits</small>
+                    <h4>$26.00 <del> $362.00</del></h4>
+               </div>
+        </div>
+        <div class="productscard">
+            <div>
+                <img src="../images/product7.jpg" alt="veggies"  height="110px" width="110px">
+            </div>
+            <div class="prodescription">
+                    <p>Fusce Aliquam</p>
+                    <small>Fruits</small>
+                    <h4>$26.00 <del> $362.00</del></h4>
+               </div>
+        </div>
+        <div class="productscard">
+            <div>
+                <img src="../images/product9.jpg" alt="veggies"  height="110px" width="110px">
+            </div>
+             <div class="prodescription">
+                    <p>Fusce Aliquam</p>
+                    <small>Fruits</small>
+                    <h4>$26.00 <del> $362.00</del></h4>
+               </div>
+            
+        </div>
+        <div class="productscard">
+            <div>
+                <img src="../images/product1.jpg" alt="veggies"  height="110px" width="110px">
+            </div>
+            <div class="prodescription">
+                    <p>Fusce Aliquam</p>
+                    <small>Fruits</small>
+                    <h4>$26.00 <del> $362.00</del></h4>
+               </div>
+        </div>
+        <div class="productscard">
+            <div>
+                <img src="../images/product12.jpg" alt="veggies"  height="110px" width="110px">
+            </div>
+            <div class="prodescription">
+                    <p>Fusce Aliquam</p>
+                    <small>Fruits</small>
+                    <h4>$26.00 <del> $362.00</del></h4>
+               </div>
+        </div>
+        <div class="productscard">
+            <div>
+                <img src="../images/product2(1).jpg" alt="veggies"  height="110px" width="110px">
+            </div>
+            <div class="prodescription">
+                    <p>Fusce Aliquam</p>
+                    <small>Fruits</small>
+                    <h4>$26.00 <del> $362.00</del></h4>
+               </div>
+        </div>
+        <div class="productscard">
+            <div>
+                <img src="../images/product13.jpg" alt="veggies"  height="110px" width="110px">
+            </div>
+            <div class="prodescription">
+                    <p>Fusce Aliquam</p>
+                    <small>Fruits</small>
+                    <h4>$26.00 <del> $362.00</del></h4>
+               </div>
+        </div>
+        <div class="brands"> 
+            <div>
+                <img src="../images/brand1.jpg" alt="brands">
+            </div>
+            <div>
+                <img src="../images/brand2.jpg" alt="brands">
+            </div>
+            <div>
+                <img src="../images/brand3.jpg" alt="brands">
+            </div>
+            <div>
+                <img src="../images/brand4.jpg" alt="brands">
+            </div>
+            <div>
+                <img src="../images/brand2.jpg" alt="brands">
+            </div>
+        </div>
+        <div class="footer1">
+            <div>
+                <img src="../images/logo.png" alt="log">
+                <p>We are a team of designers and developers that <br>create high quality eCommerce, WordPress,<br> Shopify .<br><br>
+                    <span><b>Address:</b> 4710-4890 Breckinridge USA</span><br><br>
+                    <span><b>Email:</b> demo@hasthemes.com </span><br><br>
+                    <span><b>Call us:</b> (08) 23 456 789</span><br><br>
+                </p>
+                
+            </div>
+            <div>
+                <p style="font-family: Arial, Helvetica, sans-serif;"><b>Information</b></p>
+                <a href="" class="anc">About Us</a><br>
+                <a href="" class="anc">Delivery Information</a><br>
+                <a href="" class="anc">Privacy Policy</a><br>
+                <a href="" class="anc">Terms & Conditions</a><br>
+                <a href="" class="anc">Contact Us</a><br>
+                <a href="" class="anc">Site Map</a><br>
+            </div>
+            <div>
+                 <p style="font-family: Arial, Helvetica, sans-serif;"><b>Extras</b></p>
+                  <a href="" class="anc">Brands</a><br>
+                <a href="" class="anc">Gift Certificates</a><br>
+                <a href="" class="anc">Affiliate</a><br>
+                <a href="" class="anc">Specials</a><br>
+                <a href="" class="anc">Returns</a><br>
+                <a href="" class="anc">Order History</a>  <br>
+            </div>
+            <div >
+                <p style="font-family: Arial, Helvetica, sans-serif;"><b>Sign up newsletter</b></p>
+                <p>Get updates by subscribe our weekly <br> newsletter</p>
+                <div class="subscribebutton">
+                    <input type="text" placeholder="Enter your email" class="email">
+                <button class="submit">SUBSCRIBE</button>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+   <div class="footer2">
+            <div>
+                <p style="font-family: Arial, Helvetica, sans-serif;color: white;">Copyright © 2021 Safira . All Rights Reserved.Design by Safira</p>
+            </div>
+            <div>
+                <img src="../images/paypal1.jpg" alt="paymentoptions">
+                <img src="../images/paypal2.jpg" alt="paymentoptions">
+                <img src="../images/paypal3.jpg" alt="paymentoptions">
+                <img src="../images/paypal4.jpg" alt="paymentoptions">
+            </div>
+        </div>
+
+    
+</body>
+</html>

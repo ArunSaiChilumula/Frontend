@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="text"] {
+  border: 1px solid rgb(244, 6, 6);
+}
+    </style>
+</head>
+<body>
+    <form style="text-align: center;" autocomplete="on">
+
+        <!-- name section -->
+        <label for="fname">First name :</label><br>
+        <input type="text" id="fname" name="fname"><br>
+
+         <label for="lname">Last name :</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+
+
+        <!-- Gender section -->
+        <label for="gender">Gender :</label><br>
+
+        <label for="gmale">male</label>
+        <input type="radio" id="gmale" name="gender" value="male">
+        
+        <label for="gfemale">female</label>
+        <input type="radio" id="gfemale" name="gender" value="female"><br><br>
+
+
+        <!-- skills section -->
+        <label for="Skills">Skills :</label><br>
+
+        <label for="java">Java</label>
+        <input type="checkbox" id="java" name="Skills" value="java"><br>
+                       
+         <label for="python">Python</label>
+        <input type="checkbox" id="python" name="Skills" value="python"><br>
+
+        <label for="AWS">AWS</label>
+        <input type="checkbox" id="AWS" name="Skills" value="AWS"><br><br>
+
+       <!-- Languages-->
+
+       <label for="lang">Languages</label>
+       <select name="lang" id="lang" size="4" multiple>
+        <optgroup label="national">
+        <option value="telugu">telugu</option>
+        <option value="hindi">hindi</option>
+        </optgroup>
+        <optgroup label="international">
+        <option value="english">english</option>
+        <option value="french">french</option>
+        <option value="spanish">spanish</option>
+        </optgroup>
+       </select><br>
+
+       <label for="browser">Browser</label>
+      <input list="browser" name="browser">
+      <datalist id="browser">
+        <option value="edge">
+        <option value="chrome">
+        <option value="firefox">
+        <option value="safari">
+        <option value="google">
+      </datalist><br>
+
+      <label for="pass">password</label><br>
+      <input type="password" name="pass" id="pass"><br>
+
+      <input type="button" onclick="alert('hey bro wtsupp!')" value="click here"><br>
+
+      <label for="favcolor">select color</label><br>
+      <input type="color" id="favcolor" name="favcolor" value="red"><br>
+      <input type="reset" value="reset"><br>
+
+
+      <label for="datemax">select max date</label><br>
+      <input type="date" id="datemax" name="datemax" max="1998-02-21"><br>
+      <label for="datemin">select min date</label><br>
+      <input type="date" id="datemin" name="datemin" min="2001-02-21"><br>
+
+      <label for="birthdaytime">birthday-time</label><br>
+      <input type="datetime-local" name="birthdaytime" id="birthdaytime"><br>
+
+      <label for="gemail">
+        Enter-email
+      </label><br>
+      <input type="email" name="gemail" id="gemail"><br>
+
+      <label for="email">choose-file</label><br>
+      <input type="file" id="file" name="file"><br>
+
+      <label for="range">
+        Range
+      </label>
+      <input type="range" id="range" name="range" value="50">
+
+      <label for="number">number</label>
+      <input type="number" id="number" name="number" min="5" max="10">
+
+      <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" autocomplete="off"><br><br>
+  <input type="submit" value="Submit">
+
+
+        <input type="submit" value="submit">
+
+    </form>
+</body>
+</html>

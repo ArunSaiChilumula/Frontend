@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let username = prompt("what is your name");
+        // let carname = prompt("enter your favourite car");
+
+
+        // let userdetails = {
+        //     user: [username],
+        //     favcar: [carname],
+        // };
+        // console.log(`${userdetails.favcar} is the fav car for user  ${userdetails.user}`);
+
+        //factory function 
+
+        function user(name, age, marks, extra) {
+            return {
+                name,
+                age,
+                marks,
+                extra,
+                greet() {
+                    console.log(`hiii ${name} of ${age} your marks : ${marks} and your subject ${extra.sub} and rank is ${extra.rank}`);
+
+                    console.log(this.age + "    " + this.marks);
+                }
+            }
+        }
+
+        let user1 = user("arun", 24, [1, 2, 3], { sub: "maths", rank: 2 });
+
+        // user1.number = 789456123;
+        // user1.greet();
+        // console.log(user1);
+
+        // for (let key in user1) {
+        //     console.log(`key ${key} and value ${user1[key]}`);
+        // }
+
+        console.log(Object.keys(user1));
+        console.log(Object.values(user1));
+        console.log(Object.entries(user1));
+
+
+        console.log("age" in user1);
+
+
+
+    </script>
+</body>
+
+</html>

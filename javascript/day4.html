@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btn1" style="padding: 6px 50px;background-color: cadetblue;border-radius: 5px;">click</button>
+
+    <!--  inline eventlistner -->
+    <!-- <button id="btn" onclick="alert('hi')">click</button> -->
+    <script>
+
+
+
+        let button = document.getElementById("btn1");
+        button.addEventListener("click", () => { button.style.backgroundColor = "yellow" })
+
+        const helloBtn = document.getElementById("helloBtn");
+
+
+
+        // btn1.addEventListener("click", (e) => {
+        //     console.log("Button clicked!");
+        //     console.log("Event object:", e);      // info about the event
+        //     console.log("Target:", e.target);     // the element that was clicked
+        // });
+
+
+
+
+    </script>
+</body>
+
+
+
+</html>

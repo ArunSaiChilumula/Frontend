@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Creating Objects
+        // 📦 Using Object Literal {}
+        // This is the most common way to create an object.
+
+        let book = {
+            name: "wings of fire",
+            author: "APJ Abdul kalam",
+            price: 200,
+            "publisher-100": "king of hill",
+        };
+        console.log(book);
+        // Using new Object()
+        // This is a less common way but still valid.
+        console.log("----------------------------------------------------------------");
+        let details = new Object();
+        details.name = "arun sai";
+        details.role = "SAP";
+        details.company = "Cjss";
+
+        console.log(details);
+        // Object Constructor Function
+        // You can create templates using functions.
+        console.log("----------------------------------------------------------------");
+        function cars(name, model) {
+            this.name = name;
+            this.model = model;
+        }
+
+        let car1 = new cars("bmw", "x7");
+        let car2 = new cars("audi", "q8");
+
+        console.log(car1, car2);
+        // This creates multiple objects with the same structure but different values.
+        console.log("----------------------------------------------------------------");
+
+        // operations with objects
+
+
+
+
+
+        //adding new property
+
+        details.empid = 183;
+        console.log(details);
+        console.log("--------------------------------------------------------------");
+        //updating existing property
+
+        console.log(details);
+        details.role = "react";
+        console.log(details);
+        console.log("--------------------------------------------------------------");
+
+        //deleting properties
+
+        console.log(details.empid);
+        delete details.empid;
+        console.log(details.empid);
+        console.log("----------------------------------------------------------------");
+
+        //nested object
+
+        details.adress = {
+            street: "kukatpally"
+        }
+        console.log(details);
+        console.log("----------------------------------------------------------------");
+
+        //accessing properties
+
+        console.log(book.name);
+        let key = "author";
+        console.log(book[key]);
+        console.log(book["publisher-100"]);
+        console.log("----------------------------------------------------------------");
+
+        //object methods
+
+        let student = {
+            name: "arun",
+            class: 10,
+            rollnumber: 16,
+            age: 17,
+            gpa: 9.5,
+            school: "khs",
+            adress: "bpl",
+            greet: function () {
+                console.log(`Hi iam ${this.name} of age ${this.age} from school ${this.school} in ${this.adress}`);
+            }
+        };
+
+        student.greet();
+
+        console.log("----------------------------------------------------------------");
+        //for in loop
+
+        for (let prop in student) {
+            console.log(`${prop} => ${student[prop]}`);
+        };
+
+        console.log("----------------------------------------------------------------");
+
+        console.log(Object.keys(student));
+        console.log(Object.values(student));
+        console.log(Object.entries(student));
+
+        console.log("----------------------------------------------------------------");
+        for (let [key, val] of Object.entries(student)) {
+
+            console.log(`${key} => ${val}`);
+        }
+
+        console.log("----------------------------------------------------------------");
+
+
+
+        //copy shallow and deep
+
+        let original = {
+            name: "india",
+            population: "2.5B",
+            about: {
+                languages: ["Hindhi", "english", "telugu", "tamil", "kannada"],
+                relgion: ["hindhu", "christian", "muslim", "sikh", "jain", "buddist"],
+            },
+        };
+
+        let copy = Object.assign({}, original);
+        console.log(copy);
+
+        //changing properties to see if immutable
+
+        copy.name = "bharat";
+        console.log(copy.name, original.name);//not changed original object
+
+        copy.about.relgion[0] = "assammes";
+
+        console.log(copy.about.relgion[0]);// changing orinal object so nested objects are mutable
+        console.log(original.about.relgion[0]);
+        console.log("----------------------------------------------------------------");
+
+        //to copy everything object and nested object also we need 
+
+        let copy2 = structuredClone(original);
+
+        console.log(copy2);
+
+        copy2.name = "bharata desham";
+        console.log(copy2.name, original.name);//not changed original object
+
+        console.log(original.about.relgion[0]);
+        copy2.about.relgion[0] = "Hindhu";
+        console.log(copy2.about.relgion[0]); //not changed original object
+        console.log("----------------------------------------------------------------");
+
+        //destructuring
+
+        let { name, about } = original;
+        console.log(name);
+        console.log(about);
+
+        console.log("----------------------------------------------------------------");
+        //default values in destructuring
+
+        let { population, continent = "asia" } = original;
+        console.log(population, continent);
+
+
+        //Advanced
+
+        //object to JSON string and Json string to object
+
+        let user = {
+            name: "arun",
+            age: 24,
+            bgrp: null,
+        };
+
+        //object to JSON
+        let jsn = JSON.stringify(user);
+        console.log(jsn + " => " + typeof jsn);
+
+        //Json string to object
+
+        let org = JSON.parse(jsn);
+        console.log(org);
+        console.log(typeof org);
+
+        console.log("----------------------------------------------------------------------");
+
+        //Optional Chaining (?.)
+
+        // Safely access nested properties without causing errors if an intermediate property doesn’t exist.
+
+        console.log(user.class?.adress); //with optional chaining
+        // console.log(user.class.adress); //without
+
+
+        //Nullish Coalescing (??)
+        //Provide default values only when a property is null or undefined.
+
+        console.log(user.bgrp ?? "o+"); //only uses default vals if property value is null
+        console.log(user.age ?? 26); //here not applies
+
+        console.log("----------------------------------------------------------------------");
+
+
+        let input = {
+            firstName: "arun",
+            lastName: "sai",
+            greet() {
+                console.log(this.firstName, this.lastName);
+            },
+            get getFirstName() {
+                return this.firstName;
+            },
+            set setFirstName(fname) {
+                this.firstName = fname;
+            },
+
+        };
+        input.greet();
+        console.log(input.getFirstName);
+        input.setFirstName = "bittu";
+        input.greet();
+
+        console.log("----------------------------------------------------------------------");
+
+
+        let person = {
+            firstName: "John",
+            lastName: "Doe",
+            get fullName() {
+                return this.firstName + " " + this.lastName;
+            },
+            set fullName(name) {
+                let parts = name.split(" ");
+                this.firstName = parts[0];
+                this.lastName = parts[1];
+            }
+        };
+
+        console.log(person.fullName); // John Doe
+
+        person.fullName = "Jane Smith";
+        console.log(person.firstName); // Jane
+        console.log(person.lastName);  // Smith
+
+        console.log("----------------------------------------------------------------------");
+        //Object.freeze()
+        //Prevents adding, deleting, or changing properties
+
+        Object.freeze(input);
+        input.firstName = "king"; //no change
+        console.log(input.firstName);
+        delete input.firstName;         //no change
+        console.log(input.firstName);
+        input.id = 183;             //no change
+        console.log(input.id);
+
+        console.log("----------------------------------------------------------------------");
+
+        // Object.seal()
+        // Prevents adding or deleting properties but allows updating existing ones.      
+
+        Object.seal(person);
+        person.firstName = "king"; // change
+        console.log(person.firstName);
+        delete person.firstName;         //no change
+        console.log(person.firstName);
+        person.id = 183;             //no change
+        console.log(person.id);
+
+        console.log("----------------------------------------------------------------------");
+        // Object.preventExtensions()
+        //Prevents adding new properties but allows updating and deleting existing ones.
+
+
+        let user1 = {
+            firstName: "arun",
+            age: 24,
+        };
+
+        Object.preventExtensions(user1);
+        user1.firstName = "lion"; // change
+        console.log(user1.firstName);
+        delete user1.firstName;         // change
+        console.log(user1.firstName);
+        user1.id = 183;             //no change
+        console.log(user1.id);
+
+
+        console.log("----------------------------------------------------------------------");
+
+        //Object.defineProperty() & Property Descriptors
+
+        // You can define or change property characteristics like writable, enumerable, or configurable.
+
+        //Example:
+        let person1 = {};
+
+        Object.defineProperty(person1, "name", {
+            value: "Mike",
+            writable: false,    // can't change
+            enumerable: true,   // will show up in loops
+            configurable: false // can't delete or change descriptor
+        });
+
+        console.log(person1.name); // Mike
+
+        person1.name = "peter";
+
+        for (let a in person1) {
+            console.log(a + " => " + person1[a]);
+        }
+
+        console.log("----------------------------------------------------------------------");
+
+        // Object Property Shorthand
+
+        // When the property name and the variable name are the same, you can write them more briefly using shorthand.
+
+
+        let sname = "ironman"
+        let sage = 120;
+
+        let short = {
+            sname,
+            sage
+        };
+        console.log(short.sname, sname);
+
+        console.log("----------------------------------------------------------------------");
+        //Computed Property Names
+
+        // You can create object properties dynamically by using expressions inside square brackets.  
+
+        let key1 = "score";
+        let obj = {
+            [key1]: 100
+        };
+
+        console.log(obj); // { score: 100 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

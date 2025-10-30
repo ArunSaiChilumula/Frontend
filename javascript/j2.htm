@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="demo"></p>
+
+    <script>
+        let book =
+        {
+            title: "Wings of fire",
+            author: "APJ Abdul kalam",
+            price: 500,
+            rating: 5,
+        };
+        console.log(book.author + " " + book.price + " " + book.title + " " + book.rating);
+        delete book.rating;
+        book.price = 450;
+        console.log(book.author + " " + book.price + " " + book.title + " " + book.rating);
+
+        //accessing
+        let key = "author";
+
+        console.log(book[key]);
+
+        //checking 
+        console.log(book.author?.lang);
+
+        book.language = "english";
+        book["publish-events"] = "vms store";
+
+
+        console.log(book.language + " , " + book["publish-events"]);
+
+        book.genre = []
+        book.genre = ["autobiography", "spiritual"];
+
+        console.log(book.genre);
+
+        book.address = {
+            street: "chennai",
+            country: "india",
+            postalcode: 504251
+        }
+
+        console.log(book.address)
+
+        console.log(book)
+        console.log("author" in book)
+        console.log(book.hasOwnProperty("nationality"))
+
+        let { author, price } = book;
+        console.log(author);
+        console.log(book);
+
+
+    </script>
+
+
+</body>
+
+</html>

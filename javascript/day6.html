@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btn">click here</button>
+    <script>
+
+
+        //         JavaScript comes with built -in functions that help you perform common tasks without writing everything from scratch.Two very important ones, especially when dealing with asynchronous code or timing - related actions, are:
+
+        // ✅ 1. setTimeout() – Run something after a delay
+        // ✅ 2. setInterval() – Run something repeatedly at fixed intervals
+
+        // setTimeout(function, delayInMilliseconds);
+
+
+        // ex1=>
+        // console.log("Start");
+
+        // setTimeout(function () {
+        //     console.log("This message appears after 3 seconds");
+        // }, 3000);
+
+        // console.log("End");
+
+        // ex2=>
+        // let count = 0;
+
+        // const intervalId = setInterval(function () {
+        //     count++;
+        //     console.log("This message is shown every 2 seconds, count: " + count);
+        //     if (count === 3) {
+        //         clearInterval(intervalId); // stop after 3 times
+        //         console.log("Stopped the interval");
+        //     }
+        // }, 2000);
+
+
+        // ----------------------------------------------------------------------------------------
+
+
+        //A callback function is a function that you pass as an argument to another function, and that gets called inside that function at the right time.
+
+        //  ex1=>
+        // function greet(name, callback) {
+        //     console.log("Hello " + name);
+        //     callback(); // calling the callback function
+        // }
+
+        // function sayGoodbye() {
+        //     console.log("Goodbye!");
+        // }
+
+        // greet("Arun", sayGoodbye);
+
+
+
+
+        // // ex2=> Asyncronus
+        // console.log("Start");
+
+        // setTimeout(function () {
+        //     console.log("This runs after 2 seconds");
+        // }, 2000);
+
+        // console.log("End");
+
+        // //ex3=> Asynchronus example
+
+        // function getUserData(callback) {
+        //     console.log("Fetching user data...");
+
+        //     setTimeout(function () {
+        //         const user = { id: 1, name: "Arun" };
+        //         callback(user); // call the callback after data is ready
+        //     }, 2000); // 2 seconds delay
+        // }
+
+        // function displayUser(user) {
+        //     console.log("User data received:");
+        //     console.log("ID:", user.id);
+        //     console.log("Name:", user.name);
+        // }
+
+        // getUserData(displayUser);
+
+        // console.log("Doing other work while waiting for user data...");
+
+
+        //ex4=>
+
+        document.getElementById("btn").addEventListener("click", function xyz() {
+            console.log("callback");
+        });
+
+
+
+    </script>
+</body>
+
+</html>

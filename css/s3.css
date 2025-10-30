@@ -1,0 +1,10 @@
+body{
+    background-image: url("../images/pexels-dino-uniyal-5998477-5949177.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.hero{
+    border-left: 10px solid rgb(0, 238, 255);
+    background-color: hsl(180, 100%, 50%);
+}

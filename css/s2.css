@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+.left{
+    
+    background-color: aqua;
+    padding: 20px;
+    width: 20%;
+    float: left;
+}
+.main{
+    
+    background-color: bisque;
+    padding: 20px;
+    width: 60%;
+    float: left;
+}
+.right{
+    
+    background-color: blueviolet;
+    padding: 20px;
+    width: 20%;
+    float: left;
+}
+@media screen and (max-width:800px) {
+    .left,.main,.right{
+        width: 100%;
+    }
+}

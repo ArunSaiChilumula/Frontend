@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <p id="demo"></p>
+
+    <script>
+
+        //example 1
+        // function printme() {
+        //     console.log("heyy js - good to see you");
+        // }
+        // printme();
+
+        //example 2
+
+        // function task(a, b) {
+        //     return a * b;
+        // }
+
+        // let result = task(100, 15);
+        // console.log("taks result is : " + result);
+
+        //example 3 with expressions
+
+        // let taskadd = function addingfunc(a, b) {
+        //     return (a + b);
+        // }
+
+        // let result = taskadd(150, 4455)
+
+        // console.log("taks result is : " + result);
+
+        //example 4 arguments
+        //default parameters
+        // function mymath(a = 0, b = 0) {
+        //     return (10 * (a + b));
+        // }
+
+        // console.log("task result is : " + mymath(10, 10));
+
+
+        //example 5 rest parameters
+        // function calculate(x, ...y) {
+        //     console.log("task result is : " + x);
+        //     console.log("task result is : " + y);
+        //     console.log(y[10]);
+        // }
+
+        // calculate(1, 2, 3, 5, 8, 9, 4, 5, 8, 5, 8, 189);
+
+
+        //example 6 arrow functions
+
+        // const add = (a, b) => a + b;
+        // console.log("task result is : " + add(45, 40));
+
+        // let task = (a, ...b) => {
+
+        //     let arr = [a];
+
+        //     console.log(arr);
+        //     // arr.push[]
+
+        //     for (var i = 1; i <= b.length; i++) {
+
+        //         console.log(i);
+        //         arr.push(b[i - 1]);
+        //         console.log(arr);
+        //     }
+        //     return arr;
+        // }
+
+
+        // let arrdummy = task(1, 2, 3, 4, 5);
+        // console.log("final result : " + arrdummy);
+
+
+        // example 7
+
+        // nested functions
+
+        // function outer() {
+        //     console.log("outer");
+        //     inner();
+        //     function inner() {
+        //         console.log("inner2")
+        //     }
+        // }
+        // outer();
+
+
+        //function scope
+
+
+        //         What is Function Scope?
+        // Variables declared inside a function are only accessible within that function.
+
+        // They are not visible outside the function.
+
+        // Example 1: Variable inside function
+
+        // function greet() {
+        //     let message = "Hello!";
+        //     console.log(message); // ✅ works here
+        // }
+        // greet();
+
+        // console.log(message); // ❌ Error: message is not defined
+        // Example 2: Parameter scope
+        // js
+        // Copy
+        // Edit
+        // function add(a, b) {
+        //     console.log(a + b); // ✅ works here
+        // }
+        // add(5, 10);
+
+        // console.log(a); // ❌ Error: a is not defined outside
+        // 💡 Remember:
+        // Function scope = a private room for variables — they live and die inside the function.
+
+
+
+
+        // closures
+
+        //example 8
+
+        /*  function createAccountBalance(balance) {
+              let accountBalance = balance;
+              function doWithdraw(ammount) {
+                  accountBalance = accountBalance - ammount;
+                  console.log("Here your withdrawal amount :" + ammount + " and balance amount : " + accountBalance);
+              }
+              return doWithdraw;
+          }
+  
+          let result = createAccountBalance(10000);
+          console.log(result);
+          result(500);*/
+
+
+        //call backs
+
+        //example  9
+
+
+        // orderPizza("arun", "cheeseVolcano", function (msg) {
+        //     console.log(msg);
+        // });
+
+
+        // function orderPizza(name, pizzatype, callback) {
+        //     console.log("hey " + name + " Your Order is Conformed of " + pizzatype + " we will inform you when the order is ready thanks for order!!");
+
+        //     setTimeout(function () {
+
+        //         const msg = "heyy " + name + " your Order is ready Come and pickup!!";
+        //         callback(msg);
+        //     }, 3000);
+
+
+
+        // }
+
+        // Higher order functions
+        //example 10
+
+        // 3. IIFE(Immediately Invoked Function Expression)
+        // A function that runs as soon as it is defined.
+
+
+        //     (function () {
+        //         console.log("Runs instantly!");
+        //     })();
+
+        //          Pure Functions
+        // Functions that always return the same output for the same input and have no side effects.
+
+        //             javascript
+        //         Copy
+        //         Edit
+        //         function add(a, b) {
+        //             return a + b; // No changes outside, no randomness
+        //         }
+
+        //         console.log(add(2, 3)); // 5
+        //         console.log(add(2, 3)); // 5 (always same)
+
+
+        // 4. Call Stack
+        // A place where JavaScript keeps track of which function is being run. Last In, First Out (LIFO).
+
+        // javascript
+        // Copy
+        // Edit
+        // function first() { second(); }
+        // function second() { console.log("Inside second"); }
+
+        // first();
+        // // Call Stack: [first] → [second] → pop after done
+
+
+        // Recurssions
+        // When a function calls itself to solve a problem.
+
+
+        // function countDown(n) {
+        //     if (n <= 0) return;
+        //     console.log(n);
+        //     countDown(n - 1); // self-call
+        // }
+
+        // countDown(3);
+        // // 3, 2, 1
+
+
+
+        //         What is a Higher Order Function?
+        // A Higher Order Function is simply:
+
+        // A function that either:
+
+        // Takes another function as an argument (callback), or
+
+        // Returns a function as its result, or
+
+        // Does both.
+
+        // Why are HOFs Important?
+        // They make your code reusable.
+
+        // They make it easier to handle repetitive tasks with custom behavior.
+
+        // They are the base for many built-in JavaScript methods (map, filter, reduce).
+
+        // 1. HOF Taking Another Function as an Argument
+        // Example: forEach
+
+        // javascript
+        // Copy
+        // Edit
+        // function greet(name) {
+        //   console.log("Hello " + name);
+        // }
+
+        // function processUser(names, callback) {
+        //   for (let i = 0; i < names.length; i++) {
+        //     callback(names[i]); // calling the passed function
+        //   }
+        // }
+
+        // processUser(["Arun", "Sai", "Ravi"], greet);
+        // How it works:
+
+        // processUser doesn’t know how to greet — it just knows it will call the given function for each name.
+
+        // This makes processUser flexible — tomorrow you can pass a different function.
+
+        // 2. HOF Returning Another Function
+        // Example: Function Factory
+
+        // javascript
+        // Copy
+        // Edit
+        // function multiplier(factor) {
+        //   return function(number) {
+        //     return number * factor;
+        //   }
+        // }
+
+        // const double = multiplier(2); // Creates a double function
+        // const triple = multiplier(3); // Creates a triple function
+
+        // console.log(double(5)); // 10
+        // console.log(triple(5)); // 15
+        // How it works:
+
+        // multiplier creates specialized functions without rewriting code.
+
+        // Returning a function lets you store and use it later.
+
+        // 3. Both — Taking and Returning
+        // Example: Custom Logger
+
+        // javascript
+        // Copy
+        // Edit
+        // function withTimestamp(callback) {
+        //   return function(message) {
+        //     const time = new Date().toLocaleTimeString();
+        //     callback(`[${time}] ${message}`);
+        //   }
+        // }
+
+        // const logWithTime = withTimestamp(console.log);
+        // logWithTime("Server started"); 
+        // // Example Output: [10:45:12 AM] Server started
+        // How it works:
+
+        // withTimestamp takes a function (console.log) as input.
+
+        // It returns a new function that adds a timestamp before calling the original function.
+
+        // Real-World Analogy
+        // Think of a Higher Order Function as a party host:
+
+        // Sometimes the host accepts a performer you bring (callback as argument).
+
+        // Sometimes the host gives you a performer to take home (returns a function).
+
+        // Sometimes they do both.
+      
+    </script>
+</body>
+
+</html>

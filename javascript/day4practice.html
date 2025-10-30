@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input id="name" placeholder="type your name" /> -->
+    <form id="login">
+        <input name="email" />
+        <input name="pass" />
+        <button>Login</button>
+    </form>
+
+    <button id="outer"><span id="inner">Click me</span></button>
+
+
+    <script>
+
+
+
+
+
+        //event object details
+
+        const outer = document.getElementById("outer");
+        outer.addEventListener("click", function (e) {
+            console.log("target:", e.target);         // could be "inner"
+            console.log("currentTarget:", e.currentTarget); // "outer"
+            console.log("this === currentTarget?", this === e.currentTarget); // true
+        });
+
+
+
+        // const nameInput = document.getElementById("name");
+        // nameInput.addEventListener("input", () => {
+        //     console.log("Live value:", nameInput.value);
+        // });
+        // nameInput.addEventListener("change", () => {
+        //     console.log("Committed value:", nameInput.value);
+        // });
+
+
+
+        //-------------------------form data handling---------------------------------
+        // const form = document.getElementById("login");
+        // form.addEventListener("submit", (e) => {
+        //     e.preventDefault(); // stops default browser action (page reload)
+        //     const data = new FormData(form);
+        //     console.log("Email:", data.get("email"), data.get("pass"));
+        //     // console.log(Object.fromEntries(data.entries()));
+        // });
+
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                console.log("Escape pressed");
+            }
+        });
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <p id="demo">practice</p>
+
+    <script>
+
+        //creating
+
+        let student = {
+            firstname: "arun",
+            lastname: "sai",
+            "selected course": "java fullstack",
+            iseligible: true,
+            age: 24,
+            marks: [12, 78, 89, 81],
+            address: {
+                street: "mahankali nagar",
+                phonenumber: 9381940044,
+            },
+
+            print: function () {
+                console.log("hiiii " + this.firstname + " your details " + this.age + " " + this.iseligible + " " + this.marks + " " + this["selected course"] + " " + this.address.street + "  ");
+            },
+
+
+        };
+
+        student.print();
+
+        // document.getElementById("demo").innerHTML = student.firstname + " " + student.lastname + " " + student.age + "  " + student["selected course"];
+
+
+        // //updating
+
+        // student.age = 56;
+        // student["selected course"] = "react";
+
+
+        // //deleting
+
+        // delete student.iseligible;
+        // delete student["selected course"];
+
+        // document.getElementById("demo").innerHTML = student.firstname + " " + student.lastname + " " + student.age + "  " + student["selected course"] + " " + student.iseligible;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            name: "Arun",
+            greet: function (age, city, num) {
+                console.log(`Hi, I am ${this.name}, ${age} years old from ${city} this is my number ${num}`);
+            }
+        };
+
+        let person2 = { name: "Sai" };
+
+        // Using apply
+        person.greet.apply(person2, [30, "Chennai", 9381940044]);
+
+
+
+        let emp = {
+            name: "arun",
+
+            greetname: function () {
+                return () => `${this.name}`
+
+            }
+        };
+
+        const ss = emp.greetname();
+        console.log(ss());
+
+
+
+
+
+    </script>
+</body>
+
+</html>

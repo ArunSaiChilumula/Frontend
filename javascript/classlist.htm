@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="myPara">Hello, I am a paragraph</p>
+    <button id="btn">Toggle Highlight</button>
+
+    <script>
+        const para = document.getElementById("myPara");
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", function () {
+            para.classList.toggle("highlight");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="para">Hi there,Good Morning!!!</p>
+    <p class="main">what are you planning to do,Today</p>
+    <p class="main">second p</p>
+
+    <div class="demo"></div>
+
+    <img id="image" src="../images/banner9.jpg">
+
+    <p id="title">click Here</p>
+    <button id="btn" style="padding: 5px;">tap</button>
+
+    <script>
+
+
+        let tag = document.getElementsByTagName("p");
+        tag[0].textContent = "selected with tagname";
+
+        // let y = document.getElementsByClassName("main");
+        // y[0].textContent = "changed with class name";
+
+        // document.querySelector("#para").innerHTML = "<b>Whatsupp!</b>";
+
+        //document.getElementById("para").textContent = "good vibes only";
+
+        let all = document.querySelectorAll(".main");
+        console.log(all);
+        all[1].textContent = "changed";
+
+
+        /*
+         ----- accessing dom--------
+  
+  
+          element by id
+          -> document.getElementById("para").textContent = "good vibes only";
+  
+  
+          querySelector
+          ->document.querySelector("#para").innerHTML = "<b>Whatsupp!</b>";
+          -> document.querySelector(".main").innerHTML = "<b>Whatsupp!</b>";
+  
+          querySelectorAll
+          -> let all = document.querySelectorAll(".main");
+             all[1].textContent = "changed";
+ 
+
+             elementByClassName
+          -> let y = document.getElementsByClassName("main");
+              y[0].textContent = "changed with class name";
+
+              tagname
+          ->  let tag = document.getElementsByTagName("p");
+              tag[0].textContent = "selected with tagname";
+
+
+ */
+
+
+        /*
+       
+              ------ changing style ------
+       
+               document.getElementById("para").style.color = "blue";
+       
+               let paracopy = document.getElementById("para");
+       
+               paracopy.style.backgroundColor = "yellow";
+               paracopy.style.fontSize = "50px";
+       */
+
+
+
+        /*
+        
+                --------------Creation-------------
+        
+                let mydiv = document.querySelector(".demo");
+        
+                let div1 = document.createElement("div");
+                div1.textContent = "hey";
+                mydiv.appendChild(div1);
+        
+        
+                ---------------Remove--------------
+                div1.remove();
+        
+        */
+
+
+        /*
+
+            Event listeners
+
+        let title = document.getElementById("title");
+
+        let button = document.getElementById("btn");
+
+
+        button.addEventListener("click", function () {
+            title.style.color = "blue";
+            title.style.backgroundColor = "yellow";
+            title.style.fontSize = "50px";
+        });*/
+
+
+
+
+        /*
+
+        set and get attributes
+
+        let im = document.getElementById("image");
+
+        console.log(im.getAttribute("src"));
+
+        im.setAttribute("src", "../images/banner5.jpg");
+        */
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

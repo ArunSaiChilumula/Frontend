@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // IF / ELSE / ELSE IF / SWITCH DEMO
+
+        // Example 1: Simple IF
+        let age = 20;
+        if (age >= 18) {
+            console.log("You have Right to Vote.");
+        }
+
+        // Example 2: IF ... ELSE
+        let isRaining = true;
+        if (isRaining) {
+            console.log("Take an umbrella.");
+        } else {
+            console.log("No need for an umbrella.");
+        }
+
+        // Example 3: IF ... ELSE IF ... ELSE
+        let marks = 75;
+        if (marks >= 90) {
+            console.log("Grade: A");
+        } else if (marks >= 75) {
+            console.log("Grade: B");
+        } else if (marks >= 50) {
+            console.log("Grade: C");
+        } else {
+            console.log("Grade: Fail");
+        }
+
+        // Example 4: Nested IF
+        let username = "arun";
+        let password = "1234";
+
+        if (username === "arun") {
+            if (password === "1234") {
+                console.log("Login successful!");
+            } else {
+                console.log("Wrong password.");
+            }
+        } else {
+            console.log("No such user.");
+        }
+
+
+
+        // Example 5: SWITCH 
+        let fruit = "apple";
+
+        switch (fruit) {
+            case "apple":
+                console.log("Red fruit.");
+                break;
+            case "banana":
+                console.log("Yellow fruit.");
+                break;
+            case "grape":
+                console.log("Purple fruit.");
+                break;
+            default:
+                console.log("Unknown fruit.");
+        }
+
+        // Example 6: Ternary (short form of if/else)
+        let number = 5;
+        let result = number % 2 === 0 ? "Even" : "Odd";
+        console.log("Number is:", result);
+
+        // Basic if → runs only if condition is true.
+
+        // If/else → either this OR that.
+
+        // If/else if/else → multiple conditions.
+
+        // Nested if → if inside if (like checking username + password).
+
+        // Switch → best when checking one value against many cases.
+
+        // Default in switch → runs if no case matches.
+
+        // Multiple cases together → like case 6 and 7 both give "Weekend".
+
+        // Ternary operator → short way of writing if/else in one line.
+
+
+    </script>
+</body>
+
+</html>

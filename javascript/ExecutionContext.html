@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        // 1. Global Execution Context starts here
+        var globalVar = "Global";
+
+        function f1() {
+            console.log("Inside f1");
+
+            var firstVar = "f1 variable";
+
+            function f2() {
+                console.log("Inside f2");
+                var secondVar = "f2 variable";
+
+                console.log(globalVar);   // Access global variable
+                console.log(firstVar);    // Access variable from f1()
+                console.log(secondVar);   // Access its own variable
+            }
+
+            f2(); // Call second()
+        }
+
+        f1(); // Call first()
+
+        console.log("Back to Global Context");
+
+
+
+        //1. Global Execution Context(GEC) is created Created when the program starts.
+
+
+        /*two phases
+        _____________
+       |             \
+      |               \
+creation phase        Execution phase
+
+
+creation phase->
+
+in creation phase memory is created for both variables and functions
+but variables are initialized with "undefined" 
+
+-> globalVar = undefined
+
+-> f1()  function body stored in heap
+
+
+Execution phases->
+
+in execution phase the values are assigned to the variables and  logic executes
+if any funtion calling happens it will create a new context called "Function Execution Context"
+
+-> globalVar =  "Global";
+
+creates "FEC" for calling function f1();
+
+------------------------------------------------------------------------------
+
+2.     "Function Execution Context"
+
+         two phases
+        _____________
+       |             \
+      |               \
+creation phase        Execution phase
+
+ 
+creation phase->
+
+-> firstVar = undefined;
+
+-> f2()  function body stored in heap
+
+
+Execution phases->
+
+
+-> firstVar =  "f1 variable";
+
+console.log("Inside f1");
+
+creates "FEC" for function calling   f1();
+
+-----------------------------------------------------------------------
+
+
+3."Function Execution Context"
+
+
+         two phases
+        _____________
+       |             \
+      |               \
+creation phase        Execution phase
+ 
+
+
+creation phase->
+
+-> secondVar = undefined;
+
+
+Execution phases->
+
+-> secondVar =  "f2 variable";
+
+        console.log("Inside f2");
+
+        console.log(globalVar);   
+        console.log(firstVar);    
+        console.log(secondVar);  
+
+-----------------------------------------------------------------------------------------
+
+   --call stack
+  
+   (last in first out)
+
+
+   1.Enters GEC
+   ->storing variables directly
+   ->storing objects,arrays and functions with "referece"
+
+   -----globalVar="global variable"
+   -----f1=  "address in heap"
+
+   2.Enter FEC (f1)
+
+   -----firstvar= "f1variable";
+   -----f2=  "address in heap"
+
+   3.Enter FEC (F2)
+
+   -----secondvar="f2variable"
+
+
+   ------------------------------------------
+
+   After Execution of FEC (F2)
+
+   FEC 2 "pop"
+
+   FEC 1 "pop"
+
+   at Last GEC "pop"
+
+   All variables and objects will empty by "garbage collector".*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

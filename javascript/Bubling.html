@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="parent" style="padding:20px; border:1px solid">
+        Parent
+        <button id="child">Child</button>
+    </div>
+
+    <script>
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+
+        parent.addEventListener("click", () => console.log("parent (bubble)"));
+        parent.addEventListener("click", () => console.log("parent (capture)"), { capture: true });
+
+        child.addEventListener("click", () => console.log("child (bubble)"));
+
+    </script>
+
+</body>
+
+</html>

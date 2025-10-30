@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //handling error with try catch finally and throwing an error 
+
+        // function calc(a, b) {
+        //     let c = 0;
+        //     try {
+
+        //         if (isNaN(a) || isNaN(b)) {
+        //             throw new Error("input must be a number");
+        //         }
+        //         if (b === 0) {
+        //             throw new Error(`b must be non Zero`)
+        //         }
+        //         c = a / b;
+        //         console.log(c);
+        //     }
+        //     catch (Err) {
+        //         console.error(Err.stack);
+        //     }
+        //     finally {
+        //         console.log("closing the file");
+        //     }
+        // };
+        // calc(10, "hii");
+
+
+        //custom error creation
+
+        function NotEligible(message) {
+            this.name = "NotEligible",
+                this.message = message;
+            this.stack = new Error().stack;
+        };
+
+        function checkEligibility(age) {
+            if (age >= 18) {
+                console.log("Eligible Voter");
+            }
+            else {
+                throw new NotEligible("Not Eligible you are under 18");
+            }
+        }
+
+        try {
+            checkEligibility(16)
+        }
+        catch (Error) {
+            // console.error(`${Error.name}:${Error.message}`)
+            console.error(Error.stack)
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>

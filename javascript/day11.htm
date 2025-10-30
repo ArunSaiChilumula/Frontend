@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const fast = new Promise(resolve => setTimeout(() => resolve("Fast task"), 5000));
+        // const slow = new Promise(reject => setTimeout(() => reject("Slow task"), 4000));
+        // const new1 = new Promise(resolve => setTimeout(() => resolve("new task"), 3000));
+
+
+        // Promise.race([fast, slow, new1])
+        //     .then(result => console.log("Winner:", result))
+        //     .catch(error => console.log("Error:", error));
+
+        // const p1 = new Promise((_, reject) => setTimeout(() => reject("Error from p1"), 500));
+        // const p2 = new Promise(resolve => setTimeout(() => resolve("Success from p2"), 1000));
+
+        // Promise.race([p1, p2])
+        //     .then(result => console.log("Winner:", result))
+        //     .catch(error => console.log("Race failed:", error));
+
+        // const p1 = Promise.reject("Fail 1");
+        // const p2 = new Promise(resolve => setTimeout(() => resolve("Success 2"), 1000));
+        // const p3 = new Promise(resolve => setTimeout(() => resolve("Success 3"), 2000));
+
+        // Promise.any([p1, p2, p3])
+        //     .then(result => console.log("First success:", result))
+        //     .catch(error => console.log("All failed:", error));
+
+        async function sayHi() {
+            console.log("Hi!");
+        }
+
+        sayHi().then(result => console.log(result));
+        // Output: Hi!
+        // result => undefined (but still inside a Promise)
+
+
+
+
+    </script>
+</body>
+
+</html>

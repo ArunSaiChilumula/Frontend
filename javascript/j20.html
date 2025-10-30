@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // immutability freeze and seal difference
+
+        //we can't modify,delete or add new property in freeze mode
+
+        //we can modify the properties.but we cant do delete or add new property in seal mode
+
+
+        // let employe =
+        // {
+        //     name: "arun",
+        //     role: "react dev",
+        // };
+
+        // Object.freeze(employe);
+
+        // employe.name = "naveen";
+
+        // console.log(employe.name);
+
+        // console.log(Object.isFrozen(employe));
+
+
+        // let employe =
+        // {
+        //     name: "arun",
+        //     role: "react dev",
+        // };
+
+        // Object.seal(employe);
+
+        // employe.name = "naveen";
+
+        // console.log(employe.name);
+
+        // console.log(Object.isSealed(employe));
+
+
+
+        // shallow copy and deep copy
+
+        // let user = {
+
+        //     company: "cjss",
+        //     id: 183,
+        //     address: {
+        //         street: "mahankali nager",
+        //         area: "kukatpally"
+        //     }
+        // };
+
+        // let user1 = Object.assign({}, user);
+        // user1.id = 185
+        // console.log(user1.id);
+        // console.log(user.id);
+
+        // user1.address.area = "kphb"
+
+        // console.log(user1.address.area);
+        // console.log(user.address.area);
+
+        //here nested objects are not copied they just passed the same referece
+        // that means when we change the properties in nested object in copied object the original nested object also changes
+
+        // to avoid this we use deep copy
+
+        // let user = {
+
+        //     company: "cjss",
+        //     id: 183,
+        //     address: {
+        //         street: "mahankali nager",
+        //         area: "kukatpally"
+        //     }
+        // };
+
+        // let user1 = structuredClone(user);
+        // user1.id = 185
+        // console.log(user1.id);
+        // console.log(user.id);
+
+        // user1.address.area = "kphb"
+
+        // console.log(user1.address.area);
+        // console.log(user.address.area);
+
+
+        // object to arrays and vise versa
+
+        // let user = {
+
+        //     company: "cjss",
+        //     id: 183,
+        //     street: "mahankali nager",
+        //     area: "kukatpally",
+
+        // };
+
+        // let { company, id } = user;
+
+        // console.log(company + "  this");
+
+
+        // console.log(Object.entries(user));
+
+        // let user1 = new Map([
+
+        //     ["maths", "physics", "social"],
+        //     [89, 100, 100],
+
+        // ]);
+        // console.log(Object.fromEntries(user1));
+
+
+
+        // let employees = [
+        //     {
+        //         name: "arun",
+        //         role: "react"
+        //     },
+        //     {
+        //         name: "naveen",
+        //         role: "react"
+        //     },
+        //     {
+        //         name: "raki",
+        //         role: "react"
+        //     },
+        // ];
+
+        // let a = 1;
+        // for (let { name, role } of employees) {
+
+        //     console.log("employee " + (a++) + " name : " + name + "  role : " + role);
+        // }
+
+
+        let user = {
+            name: "arun",
+            // role: {
+            //     special: "react",
+            // },
+        };
+
+        console.log(user.role?.special);
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // . What is a Class ?
+
+        //A class is like a blueprint or template to create objects.It defines properties(data) and methods(functions) that objects created from it will have.
+
+        // Example:
+
+        class Animal {
+            constructor(name) {
+                this.name = name;
+            }
+            speak() {
+                console.log(`${this.name} makes a sound.`);
+            }
+        }
+
+        const dog = new Animal("Dog");
+        dog.speak(); // Dog makes a sound.
+
+
+        // Classes help organize code and reuse functionality.
+
+        // Objects are instances created from the class blueprint.
+
+        // ✅ 2. Syntax
+
+        // This is how you write a class in JavaScript.
+
+        class AClass {
+            constructor() { }    // special function to initialize object
+            method1() { }        // normal function inside class
+            method2() { }
+            method3() { }
+            method4() { }
+        }
+
+        const a = new AClass(); // creates an instance of the class
+        console.log(a);
+
+
+        // The constructor is used to set up the object when it's created.
+
+        // Methods are functions that belong to the class.
+
+        // ✅ 3. Initialize the Object
+
+        // You pass data when creating an object, and that data is used inside the class.
+
+        class Car {
+            constructor(model) {
+                this.model = model; // property of the object
+            }
+            printModel() {
+                console.log(this.model); // prints the model
+            }
+        }
+
+        const bmwCar = new Car("BMW");
+        bmwCar.printModel(); // BMW
+
+
+        //this.model stores the value passed when creating the object.
+
+        //typeof Car is "function" because classes are syntactic sugar for functions.
+
+        // ✅ 4. Class as Expression
+
+        // Classes can be written like expressions, stored in variables.
+
+        const Employee = class {
+            welcome() {
+                console.log("Hello Employee");
+            }
+        }
+
+        const emp = new Employee();
+        emp.welcome(); // Hello Employee
+
+
+        // You can also name the class internally for debugging:
+
+        const Dept = class Department {
+            welcome() {
+                console.log("Welcome to Department");
+            }
+        }
+
+        // ✅ 5. Class Fields
+
+        // You can directly declare properties inside the class without using the constructor.
+
+        class Phone {
+            brand = "Apple"; // class field
+
+            make() {
+                console.log(this.brand);
+            }
+        }
+
+        const phone = new Phone();
+        phone.make(); // Apple
+
+
+        // Fields are like default properties available on every instance.
+
+        // ✅ 6. Getters and Setters
+
+        // These are special methods used to get or set property values.
+
+        class Animal {
+            constructor(name) {
+                this.name = name;
+            }
+            get name() {
+                return this._name;
+            }
+            set name(value) {
+                if (!value) {
+                    console.warn("Need a name");
+                    return;
+                }
+                this._name = value;
+            }
+        }
+
+        const animal = new Animal("Tiger");
+        console.log(animal.name); // Tiger
+        animal.name = "";         // Warning: Need a name
+
+
+        // The get method retrieves a property.
+
+        // The set method validates or processes data before setting it.
+
+        // ✅ 7. Static Properties
+
+        // Static methods belong to the class itself, not the object.
+
+        class MyClass {
+            static staticMethod() {
+                console.log("This is static");
+            }
+        }
+
+        MyClass.staticMethod(); // This is static
+
+
+        // Example with utility methods:
+
+        class User {
+            static isValidEmail(email) {
+                return email.includes("@") && email.includes(".");
+            }
+        }
+
+        console.log(User.isValidEmail("john@example.com")); // true
+
+
+        // Static methods are useful for helper functions.
+
+        // ✅ 8. Private and Public
+
+        //    Public: Accessible anywhere.
+
+        //    Private: Accessible only inside the class using #.
+
+        class WashingMachine {
+            brand;            // public
+            #powerStatus = false; // private
+            #currentCycle = null; // private
+
+            start(cycle) {
+                this.#powerStatus = true;
+                console.log(`Starting ${cycle}`);
+            }
+        }
+
+        const washer = new WashingMachine();
+        washer.start("Quick Wash"); // works
+        // washer.#powerStatus; // error! cannot access private field
+
+
+        // Use private fields to hide implementation details.
+
+        // ✅ 9. Extending
+
+        // A class can inherit properties and methods from another class using extends.
+
+        class Human {
+            constructor(name) {
+                this.name = name;
+            }
+            sleep() {
+                console.log(`${this.name} is sleeping.`);
+            }
+        }
+
+        class Student extends Human {
+            constructor(name, grade) {
+                super(name);
+                this.grade = grade;
+            }
+            study() {
+                console.log(`${this.name} is studying.`);
+            }
+        }
+
+        const alice = new Student("Alice", 10);
+        alice.sleep(); // inherited method
+        alice.study(); // own method
+
+
+        // super() calls the parent’s constructor.
+
+        // The child class can override methods.
+
+        // ✅ 10. OOP Concepts Using Classes
+        // ➤ Abstraction
+
+        // Hides complexity and only exposes essential functionality.
+
+        class Car {
+            startEngine() {
+                this.#injectFuel();
+                this.#ignite();
+                console.log("Engine started");
+            }
+            #injectFuel() { console.log("Fuel injected"); }
+            #ignite() { console.log("Spark generated"); }
+        }
+
+
+        // Only startEngine() is exposed to users.
+
+        // ➤ Composition
+
+        // Builds functionality using other classes.
+
+        class Engine {
+            start() {
+                console.log("Engine started");
+            }
+        }
+
+        class Car {
+            constructor() {
+                this.engine = new Engine();
+            }
+            startCar() {
+                this.engine.start();
+            }
+        }
+
+
+        // A car has an engine but doesn’t inherit from it.
+
+        // ➤ Encapsulation
+
+        // Groups data and methods together and hides internals.
+
+        class Car {
+            #speed = 0;
+            accelerate() {
+                this.#speed += 10;
+            }
+            getSpeed() {
+                return this.#speed;
+            }
+        }
+
+        // ➤ Inheritance
+
+        // Child classes reuse and extend parent behavior.
+
+        class Car {
+            drive() {
+                console.log("Driving on fuel");
+            }
+        }
+
+        class ElectricCar extends Car {
+            drive() {
+                console.log("Driving on electricity");
+            }
+        }
+
+        // ➤ Polymorphism
+
+        // Same method name behaves differently depending on the object.
+
+        const cars = [new Car(), new ElectricCar()];
+        cars.forEach(car => car.drive());
+
+
+        //         Outputs:
+
+        // Driving on fuel
+        // Driving on electricity
+
+    </script>
+</body>
+
+</html>

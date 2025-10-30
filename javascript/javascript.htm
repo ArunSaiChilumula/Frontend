@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="demo"></p>
+
+
+    <script>
+
+        //display posibilities
+
+        // window.alert("welcome to javascript");
+
+        document.write("write directly in website");
+
+        console.log("use console for debuging dom");
+
+        document.getElementById("demo").innerHTML = "Javascript Basics";
+
+
+        //js variables
+
+
+        let num = 15;
+        let word = "hii";
+        let yes = true;
+
+        let arr = [1, 2, 3];
+        let obj = {
+            name: "arun",
+        };
+
+
+        // var example
+        var x = 10;
+        var x = 20; // re-declaration allowed
+        x = 30;     // re-assignment allowed
+        console.log("var x:", x); // 30
+
+        // let example
+        let y = 10;
+        // let y = 20; // ❌ Error: cannot re-declare in same scope
+        y = 25;       // ✅ re-assignment allowed
+        console.log("let y:", y); // 25
+
+        // const example
+        const z = 10;
+        // const z = 20; // ❌ Error: cannot re-declare
+        // z = 30;      // ❌ Error: cannot re-assign
+        console.log("const z:", z); // 10
+
+
+        //js comments
+
+        /* let p=10;
+         p=50;
+         result=p*5;*/
+
+
+    </script>
+</body>
+
+</html>

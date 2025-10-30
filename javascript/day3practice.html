@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .highlight {
+            background-color: aquamarine;
+        }
+
+        .new1 {
+            background-color: blueviolet;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <ul id="fruits">
+        <li>apple</li>
+        <li>banana</li>
+        <li>pineApple</li>
+    </ul>
+
+    <div class="king">
+        king
+    </div>
+
+    <script>
+        /* let x = document.getElementById("demo");
+         x.innerHTML = "<h1>hiii good morning</h1>";
+
+         let div = document.createElement("div");
+         div.innerHTML = "<h2>adding div</h2>"
+         document.body.append(div);
+
+
+         let div1 = document.createElement("div");
+         div1.innerText = "div1 child of adding div";
+         div.appendChild(div1);
+
+         let list = document.getElementById("fruits");
+         let newElem = document.createElement("li");
+         newElem.innerText = "guava";
+
+         list.appendChild(newElem);
+
+
+         let king = document.querySelector(".king");
+         let prince = document.createElement("div");
+         prince.innerText = "iam a prince"
+         king.append("of the jungle", prince)
+         console.log(king);*/
+
+
+        // let king = document.querySelector(".king");
+
+        // let me = document.createElement("div");
+        // me.innerText = "me";
+        //  king.prepend(me);
+        //king.after(me);
+        //  king.before(me);
+
+        let list = document.getElementById("fruits");
+        let li = document.createElement("li");
+
+        li.innerText = "me";
+        list.insertBefore(li, list.children[3]);
+
+        li2 = document.createElement("li");
+        li2.innerText = "surprize";
+
+        list.replaceChild(li2, list.children[3]);
+
+
+
+        list.classList.add("highlight");
+        list.classList.replace("highlight", "new1");
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
